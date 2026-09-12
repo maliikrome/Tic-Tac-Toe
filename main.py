@@ -1,3 +1,7 @@
+from tkinter import *
+from tkinter import messagebox
+root = Tk()
+root.mainloop()
 def sum(a,b,c):
     return a+b+c
 
