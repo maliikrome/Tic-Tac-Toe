@@ -1,7 +1,24 @@
-from tkinter import *
-from tkinter import messagebox
-root = Tk()
-root.mainloop()
+import customtkinter
+
+turn = 1
+def button_clicked(button):
+    global turn
+
+    if turn == 1:
+        button.configure(text="X")
+    else:
+        button.configure(text="O")
+
+    turn = 1 - turn
+   
+root = customtkinter.CTk()
+root.title("tic tac toe")
+root.geometry("400x400")
+
+l1 = customtkinter.CTkLabel(root, text="Welcome to Tic Tac Toe")
+l1.grid(row=0, column=1)
+l2 = customtkinter.CTkLabel(root, text="Player 1: X ,Player 2: O")
+l2.grid(row=1, column=1)
 def sum(a,b,c):
     return a+b+c
 
@@ -80,7 +97,5 @@ if __name__ == "__main__":
                      break
 
                   
-
-
- 
-        turn = 1 - turn
+turn = 1 - turn
+root.mainloop()
